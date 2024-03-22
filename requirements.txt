@@ -1,0 +1,17 @@
+filterpy==1.4.5
+matplotlib==3.5.2
+numba==0.55.1
+numpy==1.21.5
+opencv_contrib_python==4.7.0.72
+opencv_python==4.7.0.68
+opencv_python_headless==4.7.0.68
+pandas==1.4.4
+plotly==5.9.0
+scikit_image==0.19.2
+scikit_learn==1.0.2
+scipy==1.9.1
+torch==2.0.1
+tqdm==4.64.1
+tsmoothie==1.0.4
+ipykernel==6.26.0
+ipython==8.12.0
