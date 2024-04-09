@@ -11,7 +11,7 @@ from the IR module of the Realsense D455 depth camera. The mmWave imaging is don
 ![This is the caption\label{mylabel}](readme_figs/OverallDemoShown2.png)
 We present TADAR, the first Thermal Array-based Detection and Ranging system that estimates the inherently missing range information for multi-user scenarios, extending thermal array outputs from 2D thermal pixels to 3D depths.
 
-**The Demo Video is on https://www.youtube.com/watch?v=zG83O0z0Vm8.**
+**The Demo Video is on https://www.youtube.com/watch?v=8l81C-WJqlE**
 
 ## Environment Setup
 ```
