@@ -372,6 +372,8 @@ class DetectingProcess():
         return peaks_in_hist, peaks, hist_no_zero, filtered
     
     def MultiOtsu(self,hist, num_classes):
+        if num_classes<2:
+            return []
         thresholds = threshold_multiotsu(image=None, classes= num_classes, hist=hist)
         return thresholds
 
