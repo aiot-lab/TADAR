@@ -366,7 +366,7 @@ class DetectingProcess():
                 fc = num_user_bound / 4
                 w = fc / (fs / 2) 
                 b, a = signal.butter(5, w, 'low')
-                filtered = signal.filtfilt(b, a, hist_no_zero)
+                    filtered = signal.filtfilt(b, a, hist_no_zero)
         peaks, _ = signal.find_peaks(filtered, height, prominence=0.1)
         peaks_in_hist = peaks + first_nonzero_index
         return peaks_in_hist, peaks, hist_no_zero, filtered
@@ -374,7 +374,16 @@ class DetectingProcess():
     def MultiOtsu(self,hist, num_classes):
         if num_classes<2:
             return []
-        thresholds = threshold_multiotsu(image=None, classes= num_classes, hist=hist)
+        if num_classes>4: 
+            original_distri_x = list(hist[0])
+            original_bins_x = list(hist[1])
+            # downsample the histogram
+            distri_x = original_distri_x[::5]
+            bins_x = original_bins_x[::5]
+            hist_new = (np.array(distri_x), np.array(bins_x))
+            thresholds = threshold_multiotsu(image=None, classes= num_classes, hist=hist_new)
+        else:
+            thresholds = threshold_multiotsu(image=None, classes= num_classes, hist=hist)
         return thresholds
 
     def CuttingEdage(self, mask_frame, original_mask, threshold_x, stride = 0.8, lambda_x = 0.6):
