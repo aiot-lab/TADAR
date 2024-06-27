@@ -366,7 +366,7 @@ class DetectingProcess():
                 fc = num_user_bound / 4
                 w = fc / (fs / 2) 
                 b, a = signal.butter(5, w, 'low')
-                    filtered = signal.filtfilt(b, a, hist_no_zero)
+                filtered = signal.filtfilt(b, a, hist_no_zero)
         peaks, _ = signal.find_peaks(filtered, height, prominence=0.1)
         peaks_in_hist = peaks + first_nonzero_index
         return peaks_in_hist, peaks, hist_no_zero, filtered
