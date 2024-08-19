@@ -1,6 +1,6 @@
 # TADAR
 
-This repository contains the code for the paper:
+This repository contains the code for the [MobiHoc'24](https://www.sigmobile.org/mobihoc/2024/) paper:
 
 > TADAR: Thermal Array-based Detection and Ranging for Privacy-Preserving Human Sensing
 
@@ -45,5 +45,15 @@ Run the visualization.ipynb
 Note: The visualization.ipynb file will generate the main result figures mentioned in the paper.
 
 ## Citation
-
-Coming soon.
+```
+@inproceedings{Zhang2024TADAR,
+  title = {{{TADAR}}: {{Thermal}} Array-Based Detection and Ranging for Privacy-Preserving Human Sensing},
+  booktitle = {Proceedings of the 25th International Symposium on Theory, Algorithmic Foundations, and Protocol Design for Mobile Networks and Mobile Computing ({{MOBIHOC}} '24)},
+  author = {Zhang, Xie and Wu, Chenshu},
+  year = {2024},
+  pages = {1--10},
+  publisher = {ACM},
+  address = {Athens, Greece},
+  doi = {10.1145/3641512.3686357}
+}
+```
